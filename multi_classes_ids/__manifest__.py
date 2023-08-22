@@ -4,7 +4,7 @@
     "description": "Now its easy to add Multiple Classes, IDs and Custom Styles for any Section, Div and Img Tags on any Snippet",
     "category": "classes/ids/style",
     "author": "Axiom World",
-    "url": "https://axiomworld.net",
+    "author_url": "https://axiomworld.net",
     "sequence": 1,
     "version": "16.0.0.1",
     "license": "OPL-1",
