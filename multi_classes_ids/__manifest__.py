@@ -13,10 +13,10 @@
     "data": [
         "views/snippet_options.xml"
     ],
-    'images': ['static/description/banner.png', 'static/description/icon.png'],
+    'images': ['static/description/banner.gif', 'static/description/icon.png'],
     "installable": True,
     "auto-install": False,
     "application": True,
-    "price": 25,
+    "price": 10,
     "currency": "USD"
 }
