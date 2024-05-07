@@ -7,7 +7,7 @@
     "website": "https://axiomworld.net",
     "maintainer": "Axiom World",
     "sequence": 1,
-    "version": "16.0.0.1",
+    "version": "17.0.0.1",
     "license": "OPL-1",
     "depends": ['website'],
     "data": [
