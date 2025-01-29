@@ -4,7 +4,7 @@
     "summary": "This module will fix the issues related to http to https requests for Iframe",
     "author": "Mr Awesome",
     "license": "LGPL-3",
-    "version": "17.0.1.0.0",
+    "version": "16.0.1.0.0",
     "sequence": 1,
     "category": "Website/Iframe",
     "depends": ["website"],
