@@ -13,7 +13,7 @@
             "iframe_fallback/static/src/js/iframe_fallback.js"
         ]
     },
-    "images": ['static/description/icon.png', 'static/description/banner.jpg'],
+    "images": ['static/description/icon.png'],
     "price": 5,
     "currency": 'USD',
     "installable": True,
