@@ -14,8 +14,6 @@
         ]
     },
     "images": ['static/description/banner.png'],
-    "price": 5,
-    "currency": 'USD',
     "installable": True,
     "auto_install": False,
     "application": True,
