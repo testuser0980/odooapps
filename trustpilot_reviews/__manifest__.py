@@ -32,7 +32,7 @@
             "trustpilot_reviews/static/src/js/**",
         ]
     },
-    "images": ["icon.png", "icon.png"],
+    "images": ['static/description/banner.png', 'static/description/icon.png'],
     "price": "30",
     "currency": "EUR",
     "installable": True,
