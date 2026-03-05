@@ -24,7 +24,7 @@
             "trustpilot_reviews/static/src/js/**",
         ]
     },
-    "images": ["banner.jpg", "icon.png"],
+    "images": ["icon.png", "banner.jpg"],
     "installable": True,
     "auto_install": False,
     "application": True
