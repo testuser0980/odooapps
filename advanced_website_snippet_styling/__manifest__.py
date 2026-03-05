@@ -24,6 +24,7 @@
         Odoo Website Custom CSS | Odoo Snippet Customization | Odoo Add CSS Classes | Odoo Website Styling Module | Odoo Custom HTML ID | Odoo Website Builder | Odoo Frontend Customization | Odoo Snippet Styling | Odoo Website Developer Tools | Odoo Custom Design Module | Add multiple CSS classes in Odoo website | Customize Odoo website snippets without coding | Odoo module for custom styles and IDs | Advanced website styling for Odoo
     """,
     "category": "Website/Advanced Snippet Styling",
+    "author": "Mr Awesome",
     "sequence": -1,
     "version": "18.0.1.0.0",
     "license": "OPL-1",
@@ -32,8 +33,8 @@
         "views/snippet_options.xml"
     ],
     'images': ['static/description/banner.png', 'static/description/icon.png'],
-    'price': 5,
-    'currency': 'EUR',
+    # 'price': 5,
+    # 'currency': 'EUR',
     "installable": True,
     "auto-install": False,
     "application": True,
