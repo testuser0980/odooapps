@@ -32,8 +32,8 @@
         "views/snippet_options.xml"
     ],
     'images': ['static/description/banner.png', 'static/description/icon.png'],
-    # 'price': 5,
-    # 'currency': 'EUR',
+    'price': 5,
+    'currency': 'EUR',
     "installable": True,
     "auto-install": False,
     "application": True,
