@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trustpilot Reviews – Odoo Module Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body style="font-family:'Sora',sans-serif;background:#f5f7fa;color:#1a1f36;">
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section style="background:linear-gradient(135deg,#00b67a 0%,#007a52 55%,#004d35 100%);padding:72px 0 60px;position:relative;overflow:hidden;">
+    <!-- decorative blobs -->
+    <div style="position:absolute;top:-80px;right:-80px;width:340px;height:340px;background:rgba(255,255,255,.06);border-radius:50%;"></div>
+    <div style="position:absolute;bottom:-60px;left:-60px;width:240px;height:240px;background:rgba(255,255,255,.05);border-radius:50%;"></div>
+
+    <div class="container position-relative">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <!-- Trustpilot-style stars -->
+                <div class="mb-3">
+                    <span style="background:#00b67a;color:#fff;font-size:22px;padding:4px 8px;border-radius:4px;margin-right:4px;">★</span>
+                    <span style="background:#00b67a;color:#fff;font-size:22px;padding:4px 8px;border-radius:4px;margin-right:4px;">★</span>
+                    <span style="background:#00b67a;color:#fff;font-size:22px;padding:4px 8px;border-radius:4px;margin-right:4px;">★</span>
+                    <span style="background:#00b67a;color:#fff;font-size:22px;padding:4px 8px;border-radius:4px;margin-right:4px;">★</span>
+                    <span style="background:#00b67a;color:#fff;font-size:22px;padding:4px 8px;border-radius:4px;">★</span>
+                </div>
+                <h1 style="font-size:clamp(2rem,5vw,3rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:16px;">
+                    Trustpilot Reviews<br/>
+                    <span style="color:#b2f0da;">for Odoo Website</span>
+                </h1>
+                <p style="font-size:1.125rem;color:rgba(255,255,255,.85);max-width:520px;line-height:1.7;margin-bottom:28px;">
+                    Automatically fetch, display, and translate your Trustpilot reviews directly inside Odoo.
+                    Showcase real customer trust with beautiful website snippets — powered by AI.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                    <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 16px;border-radius:20px;font-size:.85rem;font-weight:600;">
+                        <i class="fa fa-tag me-1"></i> Odoo 18.0
+                    </span>
+                    <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 16px;border-radius:20px;font-size:.85rem;font-weight:600;">
+                        <i class="fa fa-globe me-1"></i> Website Builder
+                    </span>
+                    <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 16px;border-radius:20px;font-size:.85rem;font-weight:600;">
+                        <i class="fa fa-magic me-1"></i> AI Translation
+                    </span>
+                    <span style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 16px;border-radius:20px;font-size:.85rem;font-weight:600;">
+                        <i class="fa fa-code me-1"></i> LGPL-3
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center">
+                <!-- Mock review card -->
+                <div style="background:#fff;border-radius:16px;padding:28px;box-shadow:0 24px 64px rgba(0,0,0,.25);text-align:left;max-width:360px;margin:0 auto;">
+                    <div class="d-flex align-items-center mb-3">
+                        <div style="width:48px;height:48px;border-radius:50%;background:#1a73e8;color:#fff;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">JD</div>
+                        <div class="ms-3">
+                            <div style="font-weight:700;color:#1a1f36;font-size:.95rem;">Jane Doe</div>
+                            <div style="font-size:.78rem;color:#6b7280;">Verified Reviewer</div>
+                        </div>
+                        <div class="ms-auto">
+                            <span style="background:#00b67a;color:#fff;font-size:13px;font-weight:700;padding:3px 10px;border-radius:4px;">5.0 ★</span>
+                        </div>
+                    </div>
+                    <div style="font-weight:700;color:#1a1f36;margin-bottom:6px;font-size:.95rem;">Absolutely outstanding service!</div>
+                    <div style="font-size:.875rem;color:#4b5563;line-height:1.6;">The team went above and beyond. I couldn't be happier with the results — highly recommend to anyone!</div>
+                    <div style="font-size:.75rem;color:#9ca3af;margin-top:10px;">March 2025</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ OVERVIEW BADGES ═══════════════════════════ -->
+<section style="background:#fff;padding:28px 0;border-bottom:1px solid #e5e7eb;">
+    <div class="container">
+        <div class="row g-3 justify-content-center text-center">
+            <div class="col-6 col-md-3">
+                <div style="padding:16px;">
+                    <div style="font-size:2rem;color:#00b67a;font-weight:800;">Auto</div>
+                    <div style="font-size:.85rem;color:#6b7280;font-weight:500;">Review Fetching</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="border-left:1px solid #e5e7eb;">
+                <div style="padding:16px;">
+                    <div style="font-size:2rem;color:#00b67a;font-weight:800;">AI</div>
+                    <div style="font-size:.85rem;color:#6b7280;font-weight:500;">Powered Translations</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="border-left:1px solid #e5e7eb;">
+                <div style="padding:16px;">
+                    <div style="font-size:2rem;color:#00b67a;font-weight:800;">∞</div>
+                    <div style="font-size:.85rem;color:#6b7280;font-weight:500;">Website Snippets</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="border-left:1px solid #e5e7eb;">
+                <div style="padding:16px;">
+                    <div style="font-size:2rem;color:#00b67a;font-weight:800;">18.0</div>
+                    <div style="font-size:.85rem;color:#6b7280;font-weight:500;">Odoo Compatible</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+<section style="padding:72px 0;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <span style="background:#e6faf3;color:#00b67a;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:20px;display:inline-block;margin-bottom:16px;">About This Module</span>
+                <h2 style="font-size:2rem;font-weight:800;margin-bottom:20px;">Turn Customer Trust into Your Best Marketing Asset</h2>
+                <p style="font-size:1.05rem;color:#4b5563;line-height:1.8;margin-bottom:0;">
+                    The <strong>Trustpilot Reviews</strong> module bridges Trustpilot and your Odoo-powered website.
+                    With a single click, fetch all your verified Trustpilot reviews into Odoo's backend, automatically
+                    generate unique author avatars, display them with beautiful website snippets, and even translate
+                    them into every active language using Odoo's built-in AI engine — no third-party subscription needed.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ KEY FEATURES ═══════════════════════════ -->
+<section style="padding:0 0 72px;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span style="background:#e6faf3;color:#00b67a;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:20px;display:inline-block;margin-bottom:16px;">Features</span>
+            <h2 style="font-size:2rem;font-weight:800;">Everything You Need, Out of the Box</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Feature 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div style="background:#fff;border-radius:16px;padding:32px;height:100%;border:1px solid #e5e7eb;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(0,182,122,.12)'" onmouseout="this.style.boxShadow='none'">
+                    <div style="width:52px;height:52px;background:#e6faf3;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="fa fa-download" style="font-size:22px;color:#00b67a;"></i>
+                    </div>
+                    <h4 style="font-weight:700;font-size:1.05rem;margin-bottom:10px;">One-Click Review Fetch</h4>
+                    <p style="font-size:.9rem;color:#6b7280;line-height:1.7;margin:0;">
+                        Simply enter your Trustpilot business URL, click <em>Fetch Trustpilot Reviews</em>, and all your verified reviews are automatically scraped, parsed, and imported into Odoo — no API key required.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div style="background:#fff;border-radius:16px;padding:32px;height:100%;border:1px solid #e5e7eb;" onmouseover="this.style.boxShadow='0 8px 32px rgba(0,182,122,.12)'" onmouseout="this.style.boxShadow='none'">
+                    <div style="width:52px;height:52px;background:#e6faf3;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="fa fa-user-circle" style="font-size:22px;color:#00b67a;"></i>
+                    </div>
+                    <h4 style="font-weight:700;font-size:1.05rem;margin-bottom:10px;">Auto-Generated Author Avatars</h4>
+                    <p style="font-size:.9rem;color:#6b7280;line-height:1.7;margin:0;">
+                        For every reviewer without a profile photo, the module automatically generates a personalized initials-based avatar with a unique, deterministic color — so your reviews always look polished.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div style="background:#fff;border-radius:16px;padding:32px;height:100%;border:1px solid #e5e7eb;" onmouseover="this.style.boxShadow='0 8px 32px rgba(0,182,122,.12)'" onmouseout="this.style.boxShadow='none'">
+                    <div style="width:52px;height:52px;background:#e6faf3;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="fa fa-magic" style="font-size:22px;color:#00b67a;"></i>
+                    </div>
+                    <h4 style="font-weight:700;font-size:1.05rem;margin-bottom:10px;">AI-Powered Translation</h4>
+                    <p style="font-size:.9rem;color:#6b7280;line-height:1.7;margin:0;">
+                        Using Odoo's native AI engine (OLG API), translate review headlines and bodies into all active languages — either per review or in bulk via a scheduled action. Serve global visitors in their language.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div style="background:#fff;border-radius:16px;padding:32px;height:100%;border:1px solid #e5e7eb;" onmouseover="this.style.boxShadow='0 8px 32px rgba(0,182,122,.12)'" onmouseout="this.style.boxShadow='none'">
+                    <div style="width:52px;height:52px;background:#e6faf3;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="fa fa-th-large" style="font-size:22px;color:#00b67a;"></i>
+                    </div>
+                    <h4 style="font-weight:700;font-size:1.05rem;margin-bottom:10px;">Dynamic Website Snippets</h4>
+                    <p style="font-size:.9rem;color:#6b7280;line-height:1.7;margin:0;">
+                        Drag-and-drop ready website builder snippets (powered by Owl + Owl Carousel) let you embed a beautiful, responsive reviews carousel on any page — no coding required.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div style="background:#fff;border-radius:16px;padding:32px;height:100%;border:1px solid #e5e7eb;" onmouseover="this.style.boxShadow='0 8px 32px rgba(0,182,122,.12)'" onmouseout="this.style.boxShadow='none'">
+                    <div style="width:52px;height:52px;background:#e6faf3;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="fa fa-filter" style="font-size:22px;color:#00b67a;"></i>
+                    </div>
+                    <h4 style="font-weight:700;font-size:1.05rem;margin-bottom:10px;">Per-Website Filtering</h4>
+                    <p style="font-size:.9rem;color:#6b7280;line-height:1.7;margin:0;">
+                        Assign reviews to specific Odoo websites. Running a multi-website setup? Show only the most relevant reviews on each site and manage everything from a single backend.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div style="background:#fff;border-radius:16px;padding:32px;height:100%;border:1px solid #e5e7eb;" onmouseover="this.style.boxShadow='0 8px 32px rgba(0,182,122,.12)'" onmouseout="this.style.boxShadow='none'">
+                    <div style="width:52px;height:52px;background:#e6faf3;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+                        <i class="fa fa-sort" style="font-size:22px;color:#00b67a;"></i>
+                    </div>
+                    <h4 style="font-weight:700;font-size:1.05rem;margin-bottom:10px;">Drag-to-Reorder Sequence</h4>
+                    <p style="font-size:.9rem;color:#6b7280;line-height:1.7;margin:0;">
+                        Control exactly which reviews your visitors see first. Use the built-in sequence handle in the list view to reorder reviews by drag-and-drop — effortlessly promote your best testimonials.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
+<section style="background:#fff;padding:72px 0;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span style="background:#e6faf3;color:#00b67a;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:20px;display:inline-block;margin-bottom:16px;">How It Works</span>
+            <h2 style="font-size:2rem;font-weight:800;">Up and Running in 3 Simple Steps</h2>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- Step 1 -->
+            <div class="col-md-4">
+                <div style="text-align:center;padding:16px;">
+                    <div style="width:64px;height:64px;background:#00b67a;color:#fff;font-size:1.6rem;font-weight:800;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">1</div>
+                    <h5 style="font-weight:700;margin-bottom:10px;">Configure Your URL</h5>
+                    <p style="font-size:.9rem;color:#6b7280;line-height:1.7;">
+                        Go to <strong>Trustpilot Reviews → Configuration</strong> in the Odoo backend. Add your Trustpilot business page URL (e.g., <code style="background:#f3f4f6;padding:2px 6px;border-radius:4px;font-size:.8rem;">trustpilot.com/review/your-company.com</code>).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Arrow -->
+            <div class="col-md-auto d-none d-md-flex align-items-center" style="padding-top:0;margin-top:-20px;">
+                <i class="fa fa-chevron-right" style="font-size:1.5rem;color:#d1d5db;"></i>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="col-md-4">
+                <div style="text-align:center;padding:16px;">
+                    <div style="width:64px;height:64px;background:#00b67a;color:#fff;font-size:1.6rem;font-weight:800;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">2</div>
+                    <h5 style="font-weight:700;margin-bottom:10px;">Fetch Your Reviews</h5>
+                    <p style="font-size:.9rem;color:#6b7280;line-height:1.7;">
+                        Click the <strong>Fetch Trustpilot Reviews</strong> button. The module scrapes the structured data from your Trustpilot page, generates author avatars, and imports all reviews instantly.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Arrow -->
+            <div class="col-md-auto d-none d-md-flex align-items-center" style="padding-top:0;margin-top:-20px;">
+                <i class="fa fa-chevron-right" style="font-size:1.5rem;color:#d1d5db;"></i>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="col-md-4">
+                <div style="text-align:center;padding:16px;">
+                    <div style="width:64px;height:64px;background:#00b67a;color:#fff;font-size:1.6rem;font-weight:800;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">3</div>
+                    <h5 style="font-weight:700;margin-bottom:10px;">Add the Snippet</h5>
+                    <p style="font-size:.9rem;color:#6b7280;line-height:1.7;">
+                        Open the Odoo Website Builder, drag the <strong>Trustpilot Reviews</strong> snippet onto any page, and your reviews carousel is live. Customize display options via the snippet settings panel.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ AI TRANSLATION HIGHLIGHT ═══════════════════════════ -->
+<section style="padding:72px 0;">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span style="background:#e6faf3;color:#00b67a;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:20px;display:inline-block;margin-bottom:16px;">AI Feature</span>
+                <h2 style="font-size:1.9rem;font-weight:800;margin-bottom:16px;">Translate Reviews Into Every Language — Automatically</h2>
+                <p style="color:#4b5563;line-height:1.8;margin-bottom:20px;">
+                    Most of your customers write reviews in their native language. Now every visitor reads them in <em>their</em> language too. The module uses Odoo's native OLG AI API to translate review headlines and bodies into all active languages on your instance — with no external subscription or API key required.
+                </p>
+                <ul style="list-style:none;padding:0;margin:0;">
+                    <li style="display:flex;align-items:flex-start;gap:12px;margin-bottom:12px;">
+                        <span style="color:#00b67a;font-size:1rem;margin-top:2px;">✔</span>
+                        <span style="color:#4b5563;font-size:.95rem;">Translate a single review from its form view with one button click</span>
+                    </li>
+                    <li style="display:flex;align-items:flex-start;gap:12px;margin-bottom:12px;">
+                        <span style="color:#00b67a;font-size:1rem;margin-top:2px;">✔</span>
+                        <span style="color:#4b5563;font-size:.95rem;">Run a scheduled action (cron) to auto-translate up to 40 reviews at a time</span>
+                    </li>
+                    <li style="display:flex;align-items:flex-start;gap:12px;">
+                        <span style="color:#00b67a;font-size:1rem;margin-top:2px;">✔</span>
+                        <span style="color:#4b5563;font-size:.95rem;">Translations stored in Odoo's standard translation layer — works with any installed language</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <!-- Code-like block -->
+                <div style="background:#1a1f36;border-radius:16px;padding:32px;font-family:'JetBrains Mono',monospace;font-size:.82rem;line-height:1.8;color:#e5e7eb;box-shadow:0 16px 48px rgba(0,0,0,.2);">
+                    <div style="display:flex;gap:8px;margin-bottom:20px;">
+                        <span style="width:12px;height:12px;border-radius:50%;background:#ff5f57;display:inline-block;"></span>
+                        <span style="width:12px;height:12px;border-radius:50%;background:#febc2e;display:inline-block;"></span>
+                        <span style="width:12px;height:12px;border-radius:50%;background:#28c840;display:inline-block;"></span>
+                    </div>
+                    <div><span style="color:#7ee787;"># Odoo AI generates translations via OLG API</span></div>
+                    <div style="margin-top:8px;"><span style="color:#79c0ff;">prompt</span> = <span style="color:#a5d6ff;">"Translate Headline='{headline}' "</span></div>
+                    <div style="padding-left:24px;"><span style="color:#a5d6ff;">"and Review Body='{body}' into {lang}"</span></div>
+                    <div style="margin-top:8px;"><span style="color:#79c0ff;">response</span> = <span style="color:#d2a8ff;">iap_tools</span>.<span style="color:#79c0ff;">iap_jsonrpc</span>(</div>
+                    <div style="padding-left:24px;"><span style="color:#a5d6ff;">olg_api_endpoint + <span style="color:#79c0ff;">"/api/olg/1/chat"</span></span></div>
+                    <div>)</div>
+                    <div style="margin-top:8px;"><span style="color:#7ee787;"># Result stored in Odoo translation layer ✓</span></div>
+                    <div><span style="color:#79c0ff;">record</span>.<span style="color:#ffa657;">with_context</span>(lang=lang).<span style="color:#ffa657;">write</span>({</div>
+                    <div style="padding-left:24px;"><span style="color:#a5d6ff;">'headline'</span>: headline,</div>
+                    <div style="padding-left:24px;"><span style="color:#a5d6ff;">'review_body'</span>: review_body</div>
+                    <div>})</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ TECHNICAL SPECS ═══════════════════════════ -->
+<section style="background:#fff;padding:72px 0;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span style="background:#e6faf3;color:#00b67a;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:20px;display:inline-block;margin-bottom:16px;">Technical</span>
+            <h2 style="font-size:2rem;font-weight:800;">Module Specifications</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div style="background:#f9fafb;border-radius:16px;overflow:hidden;border:1px solid #e5e7eb;">
+                    <table class="table mb-0" style="font-size:.9rem;">
+                        <tbody>
+                            <tr style="border-color:#e5e7eb;">
+                                <td style="padding:16px 24px;font-weight:600;color:#374151;width:220px;background:#f3f4f6;">Module Name</td>
+                                <td style="padding:16px 24px;color:#4b5563;font-family:'JetBrains Mono',monospace;">trustpilot_reviews</td>
+                            </tr>
+                            <tr style="border-color:#e5e7eb;">
+                                <td style="padding:16px 24px;font-weight:600;color:#374151;background:#f3f4f6;">Version</td>
+                                <td style="padding:16px 24px;color:#4b5563;font-family:'JetBrains Mono',monospace;">18.0.1.0</td>
+                            </tr>
+                            <tr style="border-color:#e5e7eb;">
+                                <td style="padding:16px 24px;font-weight:600;color:#374151;background:#f3f4f6;">License</td>
+                                <td style="padding:16px 24px;color:#4b5563;font-family:'JetBrains Mono',monospace;">LGPL-3</td>
+                            </tr>
+                            <tr style="border-color:#e5e7eb;">
+                                <td style="padding:16px 24px;font-weight:600;color:#374151;background:#f3f4f6;">Odoo Dependencies</td>
+                                <td style="padding:16px 24px;color:#4b5563;font-family:'JetBrains Mono',monospace;">crm, website, website_sale</td>
+                            </tr>
+                            <tr style="border-color:#e5e7eb;">
+                                <td style="padding:16px 24px;font-weight:600;color:#374151;background:#f3f4f6;">Python Libraries</td>
+                                <td style="padding:16px 24px;color:#4b5563;font-family:'JetBrains Mono',monospace;">requests, beautifulsoup4, Pillow</td>
+                            </tr>
+                            <tr style="border-color:#e5e7eb;">
+                                <td style="padding:16px 24px;font-weight:600;color:#374151;background:#f3f4f6;">Frontend Libraries</td>
+                                <td style="padding:16px 24px;color:#4b5563;font-family:'JetBrains Mono',monospace;">Owl.js (Odoo native), Owl Carousel</td>
+                            </tr>
+                            <tr style="border-color:#e5e7eb;">
+                                <td style="padding:16px 24px;font-weight:600;color:#374151;background:#f3f4f6;">AI Engine</td>
+                                <td style="padding:16px 24px;color:#4b5563;font-family:'JetBrains Mono',monospace;">Odoo OLG API (iap_tools)</td>
+                            </tr>
+                            <tr style="border-color:#e5e7eb;">
+                                <td style="padding:16px 24px;font-weight:600;color:#374151;background:#f3f4f6;">Author</td>
+                                <td style="padding:16px 24px;color:#4b5563;font-family:'JetBrains Mono',monospace;">Axiom World — axiomworld.net</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:16px 24px;font-weight:600;color:#374151;background:#f3f4f6;">Category</td>
+                                <td style="padding:16px 24px;color:#4b5563;font-family:'JetBrains Mono',monospace;">Website / Reviews / Marketing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ INSTALLATION ═══════════════════════════ -->
+<section style="padding:72px 0;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span style="background:#e6faf3;color:#00b67a;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:20px;display:inline-block;margin-bottom:16px;">Installation</span>
+            <h2 style="font-size:2rem;font-weight:800;">Getting Started</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <!-- Step 1 -->
+                <div style="display:flex;gap:20px;margin-bottom:32px;">
+                    <div style="flex-shrink:0;">
+                        <div style="width:40px;height:40px;background:#00b67a;color:#fff;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;">1</div>
+                    </div>
+                    <div>
+                        <h5 style="font-weight:700;margin-bottom:8px;">Download &amp; Install the Module</h5>
+                        <p style="color:#4b5563;font-size:.9rem;line-height:1.7;margin-bottom:10px;">Download <code style="background:#f3f4f6;padding:2px 8px;border-radius:4px;">trustpilot_reviews</code> and place it in your Odoo addons directory. Enable developer mode, then go to <strong>Apps → Update Apps List</strong> and install <strong>Trustpilot Reviews</strong>.</p>
+                        <div style="background:#1a1f36;border-radius:10px;padding:16px 20px;font-family:'JetBrains Mono',monospace;font-size:.82rem;color:#e5e7eb;">
+                            pip install requests beautifulsoup4 Pillow
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div style="display:flex;gap:20px;margin-bottom:32px;">
+                    <div style="flex-shrink:0;">
+                        <div style="width:40px;height:40px;background:#00b67a;color:#fff;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;">2</div>
+                    </div>
+                    <div>
+                        <h5 style="font-weight:700;margin-bottom:8px;">Add Your Trustpilot URL</h5>
+                        <p style="color:#4b5563;font-size:.9rem;line-height:1.7;">Navigate to <strong>Trustpilot Reviews → Configuration</strong> in the top menu. Create a new configuration record and enter your Trustpilot review page URL.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div style="display:flex;gap:20px;margin-bottom:32px;">
+                    <div style="flex-shrink:0;">
+                        <div style="width:40px;height:40px;background:#00b67a;color:#fff;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;">3</div>
+                    </div>
+                    <div>
+                        <h5 style="font-weight:700;margin-bottom:8px;">Fetch and Manage Reviews</h5>
+                        <p style="color:#4b5563;font-size:.9rem;line-height:1.7;">Click <strong>Fetch Trustpilot Reviews</strong>. Your reviews will appear under <strong>Trustpilot Reviews → Reviews</strong>. Assign them to websites, reorder via drag-and-drop, or trigger AI translations per review.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div style="display:flex;gap:20px;">
+                    <div style="flex-shrink:0;">
+                        <div style="width:40px;height:40px;background:#00b67a;color:#fff;font-weight:700;border-radius:50%;display:flex;align-items:center;justify-content:center;">4</div>
+                    </div>
+                    <div>
+                        <h5 style="font-weight:700;margin-bottom:8px;">Embed the Website Snippet</h5>
+                        <p style="color:#4b5563;font-size:.9rem;line-height:1.7;">Open the Website Builder on any page. Find the <strong>Trustpilot Reviews</strong> snippet in the snippet panel, drag it onto your page, and customize via the sidebar options panel.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+<section style="background:#fff;padding:72px 0;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span style="background:#e6faf3;color:#00b67a;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:20px;display:inline-block;margin-bottom:16px;">FAQ</span>
+            <h2 style="font-size:2rem;font-weight:800;">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <div style="border:1px solid #e5e7eb;border-radius:12px;margin-bottom:16px;overflow:hidden;">
+                    <div style="padding:20px 24px;background:#f9fafb;">
+                        <strong style="color:#1a1f36;">Do I need a Trustpilot API key?</strong>
+                    </div>
+                    <div style="padding:20px 24px;color:#4b5563;font-size:.9rem;line-height:1.7;">
+                        No. The module fetches publicly available structured data (JSON-LD) directly from your Trustpilot business page. No API key, no paid Trustpilot plan required.
+                    </div>
+                </div>
+
+                <div style="border:1px solid #e5e7eb;border-radius:12px;margin-bottom:16px;overflow:hidden;">
+                    <div style="padding:20px 24px;background:#f9fafb;">
+                        <strong style="color:#1a1f36;">Will duplicate reviews be imported if I fetch again?</strong>
+                    </div>
+                    <div style="padding:20px 24px;color:#4b5563;font-size:.9rem;line-height:1.7;">
+                        No. The module checks each review's unique Trustpilot ID before importing. Only new, previously unseen reviews are added on subsequent fetches.
+                    </div>
+                </div>
+
+                <div style="border:1px solid #e5e7eb;border-radius:12px;margin-bottom:16px;overflow:hidden;">
+                    <div style="padding:20px 24px;background:#f9fafb;">
+                        <strong style="color:#1a1f36;">How does the AI translation work?</strong>
+                    </div>
+                    <div style="padding:20px 24px;color:#4b5563;font-size:.9rem;line-height:1.7;">
+                        Translations use Odoo's built-in OLG (Odoo Language Generation) API via IAP. Your Odoo subscription credits are used — the same engine that powers Odoo's other AI features. No third-party AI subscription is needed.
+                    </div>
+                </div>
+
+                <div style="border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+                    <div style="padding:20px 24px;background:#f9fafb;">
+                        <strong style="color:#1a1f36;">Does it support multi-website setups?</strong>
+                    </div>
+                    <div style="padding:20px 24px;color:#4b5563;font-size:.9rem;line-height:1.7;">
+                        Yes. Each review can be assigned to a specific Odoo website, and the snippet can be configured to display only the reviews for the relevant site.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer style="background:#1a1f36;padding:48px 0;color:rgba(255,255,255,.6);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-3 mb-md-0">
+                <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+                    <span style="background:#00b67a;color:#fff;font-size:14px;padding:4px 8px;border-radius:4px;font-weight:700;">★ Trustpilot Reviews</span>
+                    <span style="color:rgba(255,255,255,.4);font-size:.85rem;">v18.0.1.0</span>
+                </div>
+                <p style="font-size:.85rem;margin:0;">Developed by <a href="https://axiomworld.net" style="color:#00b67a;text-decoration:none;font-weight:600;">Axiom World</a> — Licensed under LGPL-3</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p style="font-size:.85rem;margin:0;">For support, feature requests, or customization, visit<br/>
+                    <a href="https://axiomworld.net" style="color:#00b67a;text-decoration:none;font-weight:600;">axiomworld.net</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

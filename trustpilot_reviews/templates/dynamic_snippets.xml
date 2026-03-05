@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--  Theme: Ratings  -->
+    <template id="_dynamic_snippet_ratings_custom" name="Theme: Ratings">
+        <t t-call="website.s_dynamic_snippet_template">
+            <t t-set="snippet_name" t-value="'_dynamic_snippet_ratings'"/>
+        </t>
+    </template>
+
+    <!--  Theme: Dynamic Snippet Ratings Custom Options  -->
+    <template id="_dynamic_snippet_ratings_custom_options" inherit_id="website.snippet_options"
+              name="Theme: Dynamic Snippet Ratings Custom Options">
+        <xpath expr="." position="inside">
+            <t t-call="website.dynamic_snippet_carousel_options_template">
+                <t t-set="snippet_name" t-value="'dynamic_snippet_ratings'"/>
+                <t t-set="snippet_selector" t-value="'._dynamic_snippet_ratings'"/>
+            </t>
+        </xpath>
+    </template>
+
+    <!--  Theme: Dynamic Snippet Products Custom Template Options  -->
+    <template id="_dynamic_snippet_products_carousel_custom_template_options"
+              inherit_id="website.s_dynamic_snippet_options_template"
+              name="Theme: Dynamic Snippet Products Custom Template Options">
+        <xpath expr="//we-select[@data-name='filter_opt']" position="after">
+            <t t-if="snippet_name == 'dynamic_snippet_ratings'">
+                <we-many2many string="Rating"
+                              data-name="rating_opt"
+                              data-attribute-name="ratingsIds"
+                              data-no-preview="true"
+                              data-model="trustpilot.reviews"
+                              data-allow-delete="false"
+                              data-fakem2m="true"
+                              data-fields="[&quot;id&quot;]"
+                              data-select-data-attribute=""/>
+            </t>
+        </xpath>
+    </template>
+
+    <!--  TP: Dynamic Snippets  -->
+    <template id="tp_dynamic_snippets" inherit_id="website.snippets" name="TP: Dynamic Snippets">
+        <xpath expr="//snippets[@id='snippet_groups']" position="after">
+            <!-- Snippet groups -->
+            <snippets id="snippet_groups" string="TP: Snippets">
+                <t snippet-group="tp_snippets_group" t-snippet="website.s_snippet_group"
+                   string="TP Snippets"
+                   t-thumbnail=""/>
+            </snippets>
+        </xpath>
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <t t-snippet="trustpilot_reviews._dynamic_snippet_ratings_custom" string="TP: Ratings"
+               group="tp_snippets_group">
+                <keywords>rating, ratings</keywords>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

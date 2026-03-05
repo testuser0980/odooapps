@@ -1,0 +1,351 @@
+/* font-awesome 5 pro */
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+// Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+// Tomorrow
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow&display=swap');
+
+.webkit-box {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.webkit-box-2 {
+  -webkit-line-clamp: 2;
+}
+
+.webkit-box-3 {
+  -webkit-line-clamp: 3;
+}
+
+// Trustpilot Reviews - Style 01
+.s_trustpilot_reviews_style_01 {
+  .owl-carousel {
+    .owl-item {
+      padding: 20px;
+
+      img {
+        width: auto !important;
+      }
+    }
+
+    .owl-nav {
+      margin: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background: currentColor;
+        border-radius: 50%;
+        border: 0;
+        outline: 0;
+        margin: 0;
+
+        &.owl-prev {
+          left: 0;
+        }
+
+        &.owl-next {
+          right: 0;
+        }
+
+        i {
+          font-size: 20px;
+          color: #fff;
+        }
+      }
+    }
+
+    .owl-dots {
+      button {
+        span {
+          border-radius: 1px;
+          transition: all 0.3s ease;
+        }
+
+        &.active {
+          span {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  /* Slider wrapper: hides overflow */
+  .slider-wrapper {
+    position: relative;
+    overflow: hidden; // ensures only one slide visible
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    @media screen and (max-width: 992px) {
+      max-width: 100%;
+    }
+  }
+
+  /* The moving track */
+  .review-track {
+    display: flex;
+    transition: transform 0.6s ease;
+
+    .review-slide {
+      min-width: 100%; // ensures only one fits viewport
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 30px;
+      padding: 25px;
+      box-sizing: border-box;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .review-img {
+        width: 300px !important;
+        border-radius: 16px;
+        object-fit: cover;
+        @media screen and (max-width: 767px) {
+          .review-img {
+            width: 100% !important;
+          }
+        }
+      }
+
+      .review-content {
+        text-align: left;
+        flex: 1;
+
+        h3 {
+          font-style: italic;
+          font-weight: bold;
+          margin: 25px 0 10px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 1.5;
+          color: #444;
+          margin: 20px 0;
+        }
+
+        .ratings-wrapper {
+          display: flex;
+          align-items: center;
+          grid-column-gap: 20px;
+
+          > div {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .reviewer {
+          margin-top: 20px;
+          font-weight: bold;
+        }
+
+        .location {
+          font-size: 14px;
+          color: #777;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+// Trustpilot Reviews - Style 02
+.s_trustpilot_reviews_style_02 {
+  .owl-carousel {
+    .owl-item {
+      .slider-wrapper {
+        background-color: #F5F5F5;
+        padding: 20px;
+        text-align: center;
+
+        .review-content {
+          p {
+            height: 160px;
+            font-family: "Poppins", sans-serif;
+            font-size: 1.3em;
+            font-style: italic;
+            line-height: 1.5;
+            font-weight: 500;
+            color: #000000;
+            -webkit-line-clamp: 5;
+          }
+
+          .stars {
+            justify-content: center;
+
+            img {
+              width: 20px;
+            }
+          }
+
+          .reviewer {
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+
+    .owl-nav {
+      margin: 0;
+
+      button {
+        position: absolute;
+        top: 42%;
+        transform: translateY(-50%);
+        background-color: transparent !important;
+
+        i {
+          color: hsla(0, 0%, 93%, .9);
+        }
+
+        &.owl-prev {
+          left: -20px;
+        }
+
+        &.owl-next {
+          right: -20px;
+        }
+      }
+    }
+
+    .owl-dots {
+      margin-top: 10px;
+
+      button {
+        span {
+          width: 8px;
+          height: 8px;
+          margin: 0 5px;
+          border-radius: 50% !important;
+        }
+
+        &.active {
+          span {
+            background: #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Trustpilot Reviews - Style 02
+.s_trustpilot_reviews_style_03 {
+  .owl-carousel {
+    .owl-item {
+      .slider-wrapper {
+        border: 1px solid #eee;
+        padding: 20px;
+
+        .review-content {
+          p {
+            font-family: Tomorrow, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+          }
+
+          .stars {
+
+            img {
+              width: 20px;
+            }
+          }
+
+          .reviewer {
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+        }
+
+        .author-info {
+          grid-column-gap: 20px;
+
+          .author-image {
+            img {
+              height: 50px;
+              border-radius: 50%;
+            }
+          }
+
+          .reviewer {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-style: italic;
+          }
+        }
+      }
+    }
+
+    .owl-nav {
+      margin: 0;
+
+      button {
+        position: absolute;
+        top: 42%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        margin: 0;
+        border-radius: 50%;
+        background-color: #ddd !important;
+
+        i {
+          color: hsla(0, 0%, 93%, .9);
+        }
+
+        &.owl-prev {
+          left: -20px;
+        }
+
+        &.owl-next {
+          right: -20px;
+        }
+      }
+    }
+
+    .owl-dots {
+      margin-top: 10px;
+
+      button {
+
+        span {
+          width: 8px;
+          height: 8px;
+          margin: 0 5px;
+          border-radius: 50% !important;
+          transition: all 0.3s ease;
+        }
+
+        &.active {
+          span {
+            background: #000;
+            width: 20px;
+            border-radius: 5px !important;
+          }
+        }
+      }
+    }
+  }
+}

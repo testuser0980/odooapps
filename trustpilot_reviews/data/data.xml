@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!-- Filters for Dynamic Filter __ Ratings -->
+        <record id="dynamic_snippet_ratings_filter" model="ir.filters">
+            <field name="name">Ratings</field>
+            <field name="model_id">trustpilot.reviews</field>
+            <field name="user_id" eval="False"/>
+            <field name="domain">[]</field>
+            <field name="sort">["create_date asc"]</field>
+        </record>
+
+        <!-- Dynamic Filter __ Ratings -->
+        <record id="dynamic_filter_ratings" model="website.snippet.filter">
+            <field name="filter_id" ref="trustpilot_reviews.dynamic_snippet_ratings_filter"/>
+            <field name="field_names">author_name</field>
+            <field name="limit" eval="16"/>
+            <field name="name">Ratings</field>
+        </record>
+
+        <!-- Assets __ Dynamic Snippet 000 -->
+        <record id="trustpilot_reviews.000_js_assets_dynamic_snippet_000" model="ir.asset">
+            <field name="name">000 JS Dynamic Snippet 000</field>
+            <field name="bundle">web.assets_frontend</field>
+            <field name="path">/trustpilot_reviews/static/src/dynamic_snippet_options/000.js</field>
+        </record>
+
+        <!--     Cron Jobs   -->
+        <record id="cron_generate_reviews_translations_with_ai" model="ir.cron">
+            <field name="name">Generate Reviews Translations with AI</field>
+            <field name="model_id" ref="model_trustpilot_reviews"/>
+            <field name="state">code</field>
+            <field name="code">model.cron_generate_reviews_translations_with_ai()</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <!--            <field name="numbercall">-1</field>-->
+        </record>
+
+        <!--    TP: Ratings - Style 01    -->
+        <template id="dynamic_filter_template_rating_rating_style_01" name="TP: Rating Style 01">
+            <t t-foreach="records" t-as="data"
+               data-thumb="/website_sale/static/src/img/snippets_options/product_add_to_cart.svg">
+                <t t-set="record" t-value="data['_record']"/>
+                <t t-foreach="record" t-as="rec">
+                    <div class="d-flex flex-column">
+                        <p t-esc="rec.id"/>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <!--    TP: Ratings - Style 01    -->
+        <template id="dynamic_filter_template_trustpilot_reviews_style_01" name="TP: Rating Style 01">
+            <t t-foreach="records" t-as="data"
+               data-thumb="/website_sale/static/src/img/snippets_options/product_add_to_cart.svg"
+               data-number-of-elements="1">
+                <t t-set="record" t-value="data['_record']"/>
+                <t t-foreach="record" t-as="rec">
+                    <!-- Slider Container -->
+                    <div class="slider-wrapper">
+                        <div class="review-track">
+                            <div class="review-slide">
+                                <img t-attf-src="/web/image/trustpilot.reviews/#{rec.id}/author_image"
+                                     class="review-img" alt="reviewer"/>
+                                <div class="review-content">
+                                    <div class="ratings-wrapper">
+                                        <div>
+                                            <t t-foreach="int(rec.rating_value)" t-as="rsf">
+                                                <img src="/trustpilot_reviews/static/src/images/star_with_bg.svg"/>
+                                            </t>
+                                        </div>
+                                        <img src="/trustpilot_reviews/static/src/images/verified.svg"/>
+                                    </div>
+                                    <h3 class="webkit-box webkit-box-2" t-esc="rec.headline"
+                                        t-att-data-tooltip="rec.headline"/>
+                                    <p class="webkit-box webkit-box-3" t-att-data-tooltip="rec.review_body">“<t
+                                            t-esc="rec.review_body"/>”
+                                    </p>
+                                    <div class="stars d-flex align-items-center">
+                                        <t t-foreach="int(rec.rating_value)" t-as="rs">
+                                            <img src="/trustpilot_reviews/static/src/images/star.svg"/>
+                                        </t>
+                                    </div>
+                                    <div class="reviewer" t-esc="rec.author_name"/>
+                                    <!--                                    <div class="location">Restaurant Name, South Jakarta</div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <!--    TP: Ratings - Style 02    -->
+        <template id="dynamic_filter_template_trustpilot_reviews_style_02" name="TP: Rating Style 02">
+            <t t-foreach="records" t-as="data"
+               data-thumb="/website_sale/static/src/img/snippets_options/product_add_to_cart.svg"
+               data-number-of-elements="2">
+                <t t-set="record" t-value="data['_record']"/>
+                <t t-foreach="record" t-as="rec">
+                    <!-- Slider Container -->
+                    <div class="slider-wrapper">
+                        <div class="review-content">
+                            <p class="webkit-box webkit-box-3" t-att-data-tooltip="rec.review_body">“<t
+                                    t-esc="rec.review_body"/>”
+                            </p>
+                            <div class="stars d-flex align-items-center">
+                                <t t-foreach="int(rec.rating_value)" t-as="rs">
+                                    <img src="/trustpilot_reviews/static/src/images/star.svg"/>
+                                </t>
+                            </div>
+                            <div class="reviewer" t-esc="rec.author_name"/>
+                            <!--                                    <div class="location">Restaurant Name, South Jakarta</div>-->
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <!--    TP: Ratings - Style 03    -->
+        <template id="dynamic_filter_template_trustpilot_reviews_style_03" name="TP: Rating Style 03">
+            <t t-foreach="records" t-as="data"
+               data-thumb="/website_sale/static/src/img/snippets_options/product_add_to_cart.svg"
+               data-number-of-elements="3">
+                <t t-set="record" t-value="data['_record']"/>
+                <t t-foreach="record" t-as="rec">
+                    <!-- Slider Container -->
+                    <div class="slider-wrapper">
+                        <div class="review-content">
+                            <div class="stars d-flex align-items-center mb-2">
+                                <t t-foreach="int(rec.rating_value)" t-as="rs">
+                                    <img src="/trustpilot_reviews/static/src/images/star.svg"/>
+                                </t>
+                            </div>
+                            <p class="webkit-box webkit-box-3" t-att-data-tooltip="rec.review_body">“<t
+                                    t-esc="rec.review_body"/>”
+                            </p>
+                            <div class="d-flex align-items-center author-info">
+                                <div class="author-image">
+                                    <img t-attf-src="/web/image/trustpilot.reviews/#{rec.id}/author_image"
+                                         alt="reviewer"/>
+                                </div>
+                                <div class="reviewer" t-esc="rec.author_name"/>
+                            </div>
+                            <!--                                    <div class="location">Restaurant Name, South Jakarta</div>-->
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <!-- Assets __ Dynamic Carousel XML -->
+        <record id="trustpilot_reviews.s_dynamic_snippet_carousel_000_xml" model="ir.asset">
+            <field name="name">Dynamic snippet owl carousel 000 XML</field>
+            <field name="bundle">web.assets_frontend</field>
+            <field name="path">trustpilot_reviews/static/src/xml/dynamic_carousel.xml</field>
+        </record>
+
+    </data>
+</odoo>

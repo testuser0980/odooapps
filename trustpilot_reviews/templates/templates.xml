@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <template id="thd" inherit_id="website.template_header_default">
+        <xpath expr="." position="inside">
+            <owl-component name="testing_owl_component" t-att-props="json.dumps({
+                    'websiteId': website.id,
+                })"/>
+        </xpath>
+    </template>
+
+</odoo>

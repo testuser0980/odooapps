@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--  Theme: Default Snippet Options  -->
+    <template id="default_snippet_options" inherit_id="website.snippet_options" name="Theme: Default Snippet Options">
+        <xpath expr="." position="inside">
+            <div data-selector="section, section .container, section [class^='col-'], section .card, section img">
+                <we-input string="Add New Classes" class="o_we_large"
+                          data-attribute-name="class" data-no-preview="false" data-select-attribute=""
+                          placeholder="Add New Classes" title="Add New Classes"/>
+                <we-input string="Add New ID" class="o_we_large"
+                          data-attribute-name="id" data-no-preview="false" data-select-attribute=""
+                          placeholder="Add ID" title="Add New ID"/>
+                <we-input string="Add Custom Styles" class="o_we_large" data-no-preview="false"
+                          data-select-attribute=""
+                          data-attribute-name="style" title="Add Custom Styles"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!--  Theme: Website Sale Snippet Options  -->
+    <template id="website_sale_snippet_options" inherit_id="website_sale.snippet_options"
+              name="Theme: Website Sale Snippet Options">
+        <xpath expr="//div[@data-js='WebsiteSaleGridLayout']" position="before">
+            <div data-page-options="true" data-selector="main:has(.o_wsale_products_page)" data-no-check="true">
+                <we-checkbox string="Show Banner" name="show_banner"
+                             data-customize-website-views="theme_axiom.shop_banner"
+                             data-reload="/"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Theme: Dynamic Snippet Option -->
+    <template id="theme_dynamic_snippet_options" inherit_id="website.s_dynamic_snippet_options_template"
+              name="Theme: Dynamic Snippet Options">
+        <xpath expr="//div" position="inside">
+            <we-title class="mt-2 o_grouping_message">
+                <t t-esc="grouping_message"/>
+            </we-title>
+            <we-select string="└ Desktop" data-name="number_of_elements_opt" data-attribute-name="numberOfElements"
+                       data-no-preview="true" data-attribute-default-value="4">
+                <we-button data-select-data-attribute="1">1</we-button>
+                <we-button data-select-data-attribute="2">2</we-button>
+                <we-button data-select-data-attribute="3">3</we-button>
+                <we-button data-select-data-attribute="4">4</we-button>
+                <we-button data-select-data-attribute="5">5</we-button>
+                <we-button data-select-data-attribute="6">6</we-button>
+                <we-button data-select-data-attribute="7">7</we-button>
+                <we-button data-select-data-attribute="8">8</we-button>
+                <we-button data-select-data-attribute="9">9</we-button>
+                <we-button data-select-data-attribute="10">10</we-button>
+            </we-select>
+            <we-select string="└ Mobile" data-name="number_of_elements_small_devices_opt"
+                       data-attribute-name="numberOfElementsSmallDevices" data-no-preview="true"
+                       data-attribute-default-value="1">
+                <we-button data-select-data-attribute="1">1</we-button>
+                <we-button data-select-data-attribute="2">2</we-button>
+                <we-button data-select-data-attribute="3">3</we-button>
+                <we-button data-select-data-attribute="4">4</we-button>
+                <we-button data-select-data-attribute="5">5</we-button>
+            </we-select>
+            <we-row string="Buttons" class="o_we_full_row">
+                <we-button title="Loop" class="fa fa-fw fa-refresh"
+                           data-select-data-attribute="false|true" data-attribute-name="loop"
+                           data-no-preview="true"/>
+                <we-button title="dots" class="fa fa-fw fa-circle"
+                           data-select-data-attribute="false|true" data-attribute-name="dots"
+                           data-no-preview="true"/>
+                <we-button title="Nav" class="fa fa-fw fa-bars"
+                           data-select-data-attribute="false|true" data-attribute-name="nav"
+                           data-no-preview="true"/>
+            </we-row>
+            <we-row string=" " class="o_we_full_row">
+                <we-button title="Autoplay" class="fa fa-fw fa-play"
+                           data-select-data-attribute="false|true" data-attribute-name="autoPlay"
+                           data-no-preview="true"/>
+                <we-button title="Rewind" class="fa fa-fw fa-step-backward"
+                           data-select-data-attribute="false|true" data-attribute-name="rewind"
+                           data-no-preview="true"/>
+            </we-row>
+            <t t-if="snippet_name == 'dynamic_snippet_categories' or snippet_name == 'dynamic_snippet_brands'">
+                <we-row string=" " class="o_we_full_row">
+                    <we-button title="Products Count" class="fa fa-calculator fa-fw"
+                               data-select-data-attribute="false|true" data-attribute-name="count" data-name="count"
+                               data-no-preview="true"/>
+                    <we-button title="Hide (0 Count) Products" class="fa fa-eye-slash fa-fw"
+                               data-name="hidezerocountproducts"
+                               data-select-data-attribute="false|true" data-attribute-name="hidezerocountproducts"
+                               data-no-preview="true"/>
+                </we-row>
+            </t>
+            <t
+                    t-if="snippet_name == 'dynamic_snippet' or snippet_name == 'dynamic_snippet_products' or snippet_name == '_dynamic_snippet_products_carousel'">
+                <we-row string=" " class="o_we_full_row">
+                    <we-button title="Rating" class="fa fa-fw fa-star"
+                               data-select-data-attribute="false|true" data-attribute-name="rating"
+                               data-no-preview="true"/>
+                    <we-button title="Quick View" class="fa fa-fw fa-eye"
+                               data-select-data-attribute="false|true" data-attribute-name="quickview"
+                               data-no-preview="true"/>
+                    <we-button title="Wishlist" class="fa fa-fw fa-heart"
+                               data-select-data-attribute="false|true" data-attribute-name="wishlist"
+                               data-no-preview="true"/>
+                    <we-button title="Compare" class="fa fa-fw fa-exchange"
+                               data-select-data-attribute="false|true" data-attribute-name="compare"
+                               data-no-preview="true"/>
+                </we-row>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="act_window_trustpilot_reviews" model="ir.actions.act_window">
+        <field name="name">Trustpilot Reviews</field>
+        <field name="res_model">trustpilot.reviews</field>
+        <field name="path">trustpilot-reviews</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="act_window_trustpilot_reviews_configuration" model="ir.actions.act_window">
+        <field name="name">Trustpilot Reviews Configuration</field>
+        <field name="res_model">trustpilot.reviews.configuration</field>
+        <field name="path">trustpilot-reviews-configuration</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <record id="list_view_trustpilot_reviews" model="ir.ui.view">
+        <field name="name">Trustpilot Reviews</field>
+        <field name="model">trustpilot.reviews</field>
+        <field name="arch" type="xml">
+            <list create="0">
+                <field name="sequence" widget="handle"/>
+                <field name="review_id" optional="hide"/>
+                <field name="author_name"/>
+                <field name="headline"/>
+                <field name="review_body"/>
+                <field name="date_published" optional="hide"/>
+                <field name="best_rating"/>
+                <field name="worst_rating"/>
+                <field name="rating_value"/>
+                <field name="website_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="form_view_trustpilot_reviews" model="ir.ui.view">
+        <field name="name">Trustpilot Reviews</field>
+        <field name="model">trustpilot.reviews</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <header>
+                    <button class="btn btn-primary" name="generate_review_translations_with_ai" type="object"
+                            icon="fa-magic" string="Generate Reviews Translations with AI"/>
+                </header>
+                <sheet>
+                    <field name="author_image" widget="image" class="oe_avatar"
+                           options="{'convert_to_webp': True, 'preview_image': 'author_image'}"/>
+                    <div class="oe_title">
+                        <label for="author_name" string="Author"/>
+                        <h1>
+                            <div class="d-flex">
+                                <field class="text-break" name="author_name" options="{'line_breaks': False}"
+                                       widget="text"
+                                       placeholder="e.g. John Doe"/>
+                            </div>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="website_id"/>
+                    </group>
+                    <notebook>
+                        <page string="General Information" name="general_information">
+                            <group>
+                                <group>
+                                    <field name="headline"/>
+                                    <field name="date_published"/>
+                                    <field name="best_rating"/>
+                                    <field name="worst_rating"/>
+                                    <field name="rating_value"/>
+                                </group>
+                                <group>
+                                    <field name="review_body" options="{'line_breaks': False}" widget="text"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="list_view_trustpilot_reviews_configuration" model="ir.ui.view">
+        <field name="name">Trustpilot Reviews Configuration</field>
+        <field name="model">trustpilot.reviews.configuration</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="trustpilot_review_url"/>
+                <button class="btn btn-sm btn-primary" name="fetch_trustpilot_reviews" type="object"
+                        string="Fetch Trustpilot Reviews"
+                        invisible="trustpilot_review_url == False"/>
+            </list>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="menu_trustpilot_reviews_dummy" name="Trustpilot Reviews"
+              parent="website.menu_site"
+              sequence="50">
+        <menuitem id="menu_trustpilot_reviews" name="Trustpilot Reviews"
+                  action="trustpilot_reviews.act_window_trustpilot_reviews" sequence="1"/>
+        <menuitem id="menu_trustpilot_reviews_configuration" name="Trustpilot Reviews Configuration"
+                  action="trustpilot_reviews.act_window_trustpilot_reviews_configuration" sequence="2"/>
+    </menuitem>
+
+</odoo>
