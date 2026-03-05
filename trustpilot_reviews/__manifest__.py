@@ -27,13 +27,12 @@
             "trustpilot_reviews/static/src/dynamic_snippet_options/website_ratings/options.js",
         ],
         "web.assets_frontend": [
-            # "trustpilot_reviews/static/src/owl_components/**",
             "trustpilot_reviews/static/src/libs/**",
             "trustpilot_reviews/static/src/scss/**",
             "trustpilot_reviews/static/src/js/**",
         ]
     },
-    "images": ["icon.png", "banner.png"],
+    "images": ["banner.png", "icon.png"],
     "price": "30",
     "currency": "EUR",
     "installable": True,
